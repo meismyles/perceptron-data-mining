@@ -13,6 +13,7 @@ These should all be within the same directory as ‘perceptron.py’.
 If different filenames are to be used the code will need to be updated accordingly.
 
 **Build & Execute Instructions**
+
 To build and execute run command ‘python perceptron.py’ from the command line.
 
 You will be presented with 2 options:
