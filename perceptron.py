@@ -11,10 +11,10 @@ def process(userChoice):
     maxIter = int(raw_input("\nHow many iterations would you like to run? "))
 
     # Get all features from files and determine the number of features
-    featspace = get_feat_space("train.positive")
-    featspace = featspace.union(get_feat_space("train.negative"))
-    featspace = featspace.union(get_feat_space("test.positive"))
-    featspace = featspace.union(get_feat_space("test.negative"))
+    featspace = get_feat_space("./data/train.positive")
+    featspace = featspace.union(get_feat_space("./data/train.negative"))
+    featspace = featspace.union(get_feat_space("./data/test.positive"))
+    featspace = featspace.union(get_feat_space("./data/test.negative"))
     D = len(featspace)
     print "Dimensionality of the feature space: %i\n" % D
 
@@ -31,10 +31,10 @@ def process(userChoice):
         weights[feat_val] = 0
 
     # Generate the train and test data
-    train_data = get_feat_vects("train.positive", D, 1)
-    train_data.extend(get_feat_vects("train.negative", D, -1))
-    test_data = get_feat_vects("test.positive", D, 1)
-    test_data.extend(get_feat_vects("test.negative", D, -1))
+    train_data = get_feat_vects("./data/train.positive", D, 1)
+    train_data.extend(get_feat_vects("./data/train.negative", D, -1))
+    test_data = get_feat_vects("./data/test.positive", D, 1)
+    test_data.extend(get_feat_vects("./data/test.negative", D, -1))
 
 
     ''' Run different train/test methods depending on users choice.
