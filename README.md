@@ -14,7 +14,7 @@ If different filenames are to be used the code will need to be updated according
 
 **Build & Execute Instructions**
 
-To build and execute run command ‘python perceptron.py’ from the command line.
+To build and execute run command `python perceptron.py` from the command line.
 
 You will be presented with 2 options:
 
